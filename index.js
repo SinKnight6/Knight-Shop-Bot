@@ -62,7 +62,7 @@ bot.on("guildMemberAdd", async member => {
    :scroll:  13. Discord Terms of Service and Community Guidelines apply. 
    You must be at least 13 years old to use Discord, and abide by all other terms and guidelines.`) 
    
-   channel.send(':key: 14. Ones you’re done reading the rules please type ``“?agree”`` in order to unlock server.')
+   channel.send(':key: 14. Ones you’re done reading the rules please type ``?agree`` in order to unlock server.')
     member.send("Welcome to the Knight-Shop server please make sure to read the rules in order to unlock the full server!")
 
 })
