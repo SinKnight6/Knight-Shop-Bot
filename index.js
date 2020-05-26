@@ -60,10 +60,10 @@ bot.on("guildMemberAdd", async member => {
    :thinking:  12. Rules are subject to common sense. These rules are not comprehensive and use of loopholes to violate the spirit of these rules is subject to enforcement.
    
    :scroll:  13. Discord Terms of Service and Community Guidelines apply. 
-   You must be at least 13 years old to use Discord, and abide by all other terms and guidelines.`) 
+   You must be at least 13 years old to use Discord, and abide by all other terms and guidelines. 
    
-   channel.send(':key: 14. Ones you’re done reading the rules please type, ``?agree`` in order to unlock server.')
-    member.send("Welcome to the Knight-Shop server please make sure to read the rules in order to unlock the full server!");
+   :key: 14. Ones you’re done reading the rules please type, \`?verify\` in order to unlock server.`)
+
 
 bot.on("message", async message => {
     let args = message.content.substring(PREFIX.length).split(" ");
