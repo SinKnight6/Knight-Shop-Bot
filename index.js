@@ -77,7 +77,6 @@ bot.on("message", async message => {
   .catch(console.error);
     }
 
-
     })
 
 })
