@@ -28,7 +28,7 @@ bot.on("ready", async () => {
 
 
 bot.on("guildMemberAdd", async member => {
-    const channel = member.guild.channels.cache.find(channel => channel.name === "server-rules")
+    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome")
     if(!channel) return;
 
     channel.send(`Welcome to our server!, ${member}, <a:party_discord:689702464030638167>
