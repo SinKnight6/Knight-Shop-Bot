@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const token = process.env.token;
 
-const PREFIX = "!";
+const PREFIX = "+";
 
 const bot = new Discord.Client({disableEveryone: true});
 
@@ -176,7 +176,7 @@ bot.on('message', async function(message) {
   else if (isValidCommand(message, "say")) {
     message.delete()
     let announcement = message.content.substring(5);
-    let announcementsChannel = bot.channels.cache.get('695565874370707535');
+    let announcementsChannel = bot.channels.cache.get('689368138038771730');
     let genralChannel = bot.channels.cache.find(channel => channel.name.toLowerCase() === '『💬』general');
     let embed = new Discord.MessageEmbed();
     if(announcementsChannel)
@@ -248,7 +248,7 @@ bot.on('message', async function(message) {
           message.channel.send("You cannot mute that person!");
         }
         else {
-          let mutedRole = message.guild.roles.cache.get('695565873515069443');
+          let mutedRole = message.guild.roles.cache.get('688858722134655103');
           if (mutedRole) {
             member.roles.add(mutedRole);
             message.channel.send("User was muted.");
@@ -276,7 +276,7 @@ bot.on('message', async function(message) {
           message.channel.send("You cannot mute that person!");
         }
         else {
-          let mutedRole = message.guild.roles.cache.get('695565873515069443');
+          let mutedRole = message.guild.roles.cache.get('688858722134655103');
           if (mutedRole) {
             member.roles.remove(mutedRole);
             message.channel.send("User was unmuted.");
