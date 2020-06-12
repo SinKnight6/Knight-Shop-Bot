@@ -71,7 +71,7 @@ bot.on("message", async message => {
 
 
 
-    if (message.content.toLowerCase() === '+clear') {
+    if (message.content.toLowerCase() === '?clear') {
         message.channel.bulkDelete(100)
   .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
   .catch(console.error);
