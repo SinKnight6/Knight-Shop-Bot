@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const token = process.env.token;
 
-const PREFIX = "@";
+const PREFIX = '$';
 
 const bot = new Discord.Client({disableEveryone: true});
 
