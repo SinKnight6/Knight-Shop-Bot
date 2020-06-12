@@ -181,7 +181,7 @@ bot.on('message', async function(message) {
     let embed = new Discord.MessageEmbed();
     if(announcementsChannel)
     embed.addField('**Announcement**', announcement);
-    embed.setColor(colors.black);
+    embed.setColor(000000);
     embed.setFooter('Announced by Staff')
     announcementsChannel.send(embed);
     
