@@ -73,14 +73,6 @@ bot.on('message', async function(message) {
   if(message.author.bot) return;
 
 
-    if (message.content.toLowerCase() === '?clear') {
-        message.channel.bulkDelete(100)
-  .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
-  .catch(console.error);
-    }
-
-    })
-
 
   if(isValidCommand(message, 'hello'))
     message.reply('Hello!');
@@ -289,5 +281,6 @@ bot.on('message', async function(message) {
 
 });
 
+})
 
 bot.login(token);
