@@ -27,9 +27,11 @@ bot.on("ready", async () => {
 })
 
 
-bot.on("guildMemberAdd", async member => {
+bot.on('message', async function(message) {
+  if(message.author.bot) return;
+
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome")
-    if(!channel) return;
+
 
     channel.send(`Welcome to our server!, ${member}, <a:party_discord:689702464030638167>
 
@@ -68,9 +70,6 @@ const isValidCommand = (message, cmdName) => message.content.toLowerCase().start
 const rollDice = () => Math.floor(Math.random() * 6) + 1;
 const checkPermissionRole = (role) => role.permissions.has('ADMINISTRATOR') || role.permissions.has('KICK_MEMBERS') || 
 role.permissions.has('BAN_MEMBERS') ||role.permissions.has('MANAGE_GUILD') ||role.permissions.has('MANAGE_CHANNELS')
-
-bot.on('message', async function(message) {
-  if(message.author.bot) return;
 
 
 
@@ -281,6 +280,5 @@ bot.on('message', async function(message) {
 
 });
 
-})
 
 bot.login(token);
