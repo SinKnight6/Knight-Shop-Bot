@@ -27,11 +27,9 @@ bot.on("ready", async () => {
 })
 
 
-bot.on('message', async function(message) {
-  if(message.author.bot) return;
-
+bot.on("guildMemberAdd", async member => {
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome")
-
+    if(!channel) return;
 
     channel.send(`Welcome to our server!, ${member}, <a:party_discord:689702464030638167>
 
@@ -66,12 +64,28 @@ You must be at least 13 years old to use Discord, and abide by all other terms a
    
 :key: 14. Ones you’re done reading the rules please type, \`?verify\` in order to unlock server.`)
 
-const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
+
+bot.on("message", async message => {
+    let args = message.content.substring(PREFIX.length).split(" ");
+    if (message.author.bot) return;
+
+
+
+    if (message.content.toLowerCase() === '?clear') {
+        message.channel.bulkDelete(100)
+  .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
+  .catch(console.error);
+    }
+
+    })
+
+    const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
 const rollDice = () => Math.floor(Math.random() * 6) + 1;
 const checkPermissionRole = (role) => role.permissions.has('ADMINISTRATOR') || role.permissions.has('KICK_MEMBERS') || 
 role.permissions.has('BAN_MEMBERS') ||role.permissions.has('MANAGE_GUILD') ||role.permissions.has('MANAGE_CHANNELS')
 
-
+bot.on('message', async function(message) {
+  if(message.author.bot) return;
 
   if(isValidCommand(message, 'hello'))
     message.reply('Hello!');
@@ -280,5 +294,6 @@ role.permissions.has('BAN_MEMBERS') ||role.permissions.has('MANAGE_GUILD') ||rol
 
 });
 
+})
 
 bot.login(token);
