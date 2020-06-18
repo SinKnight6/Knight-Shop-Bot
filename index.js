@@ -65,10 +65,6 @@ You must be at least 13 years old to use Discord, and abide by all other terms a
 :key: 14. Ones you’re done reading the rules please type, \`?verify\` in order to unlock server.`)
 
 
-bot.on("message", async message => {
-    let args = message.content.substring(PREFIX.length).split(" ");
-    if (message.author.bot) return;
-
 
 
     if (message.content.toLowerCase() === '?clear') {
@@ -78,8 +74,6 @@ bot.on("message", async message => {
     }
 
     })
-
-  })
 
   if (message.content.startsWith('WEATHER') || (message.content.startsWith('weather'))){
     weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result){
