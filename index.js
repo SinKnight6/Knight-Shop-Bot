@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 
 const token = process.env.token;
 
+const weather = require('weather-js');
+
 const PREFIX = '$';
 
 const bot = new Discord.Client({disableEveryone: true});
