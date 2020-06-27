@@ -88,6 +88,7 @@ bot.on("message", async message => {
     if (message.author.bot) return;
 
     if (message.content.startsWith('WEATHER') || (message.content.startsWith('weather'))){
+        message.delete()
         weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result){
           if (err) message.channel.send(err);
           if (result.length === 0){
