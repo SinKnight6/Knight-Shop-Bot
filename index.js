@@ -83,7 +83,7 @@ bot.on("ready", async () => {
     :scroll:  13. Discord Terms of Service and Community Guidelines apply. 
     You must be at least 13 years old to use Discord, and abide by all other terms and guidelines. 
     
-    :key: 14. **Ones you’re done reading the rules please type REACT to <:Member:726551839155290132> in order to unlock server.**`)
+    :key: 14. **Once you’re done reading the rules please type REACT to <:Member:726551839155290132> in order to unlock server.**`)
         message.channel.send(embed);
       }
     });
