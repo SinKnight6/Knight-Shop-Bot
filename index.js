@@ -51,7 +51,7 @@ bot.on("ready", async () => {
       {
         const embed = new Discord.MessageEmbed();
         embed.setTitle("Welcome to our server!");
-        embed.setColor(X0059FF);
+        embed.setColor(000000);
         embed.setDescription(`
     
         HERE ARE THE RULES:
