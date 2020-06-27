@@ -38,7 +38,7 @@ bot.on("ready", async () => {
           const embedMsg = message.embeds.find(msg => msg.title === 'Welcome to our server!');
           if(embedMsg)
           {
-            message.react('708923041928839169')
+            message.react('726551839155290132')
             .then(reaction => console.log('Reacted with' + reaction.emoji.name))
             .catch(err => console.err);
           }
@@ -83,7 +83,7 @@ bot.on("ready", async () => {
     :scroll:  13. Discord Terms of Service and Community Guidelines apply. 
     You must be at least 13 years old to use Discord, and abide by all other terms and guidelines. 
     
-    :key: 14. Ones you’re done reading the rules please type, \`REACT\` to <:Members:708923041928839169> in order to unlock server.`)
+    :key: 14. **Ones you’re done reading the rules please type REACT to <:Member:726551839155290132> in order to unlock server.**`)
         message.channel.send(embed);
       }
     });
@@ -113,7 +113,30 @@ bot.on("ready", async () => {
 
 // Break
 
+if (message.content.startsWith('WEATHER') || (message.content.startsWith('weather'))){
+    weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result){
+      if (err) message.channel.send(err);
+      if (result.length === 0){
+        message.channel.send('**Please enter a valid location.**')
+        return;
+      }
+      var current = result[0].current;
+      var location = result[0].location;
+      const uEmbed = new Discord.MessageEmbed()
+        .setDescription(`**${current.skytext}**`)
+        .setAuthor(`Weather for ${current.observationpoint}`)
+        .setThumbnail(current.imageUrl)
+        .setColor(0x00AE86)
+        .addField(`Timezone`,`UTC${location.timezone}`, true)
+        .addField(`Degree Type`,location.degreetype, true)
+        .addField(`Temperature`,`${current.temperature} Degrees`, true)
+        .addField(`Feels Like`, `${current.feelslike} Degree`,true)
+        .addField(`Winds`,current.winddisplay, true)
+        .addField(`Humidity`, `${current.humidity}%`, true)
+        message.channel.send({embed: uEmbed});
 
+    });
+  }
     
     
 });
