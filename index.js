@@ -54,7 +54,7 @@ bot.on("ready", async () => {
         embed.setColor(000000);
         embed.setDescription(`
     
-        HERE ARE THE RULES:
+                                            HERE ARE THE RULES:
     
     :smiley: 1. Be cool, kind, and civil. Treat all members with respect and express your thoughts in a constructive manner.
     
