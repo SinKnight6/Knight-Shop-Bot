@@ -52,9 +52,7 @@ bot.on("ready", async () => {
         const embed = new Discord.MessageEmbed();
         embed.setTitle("Welcome to our server!");
         embed.setColor(000000);
-        embed.setDescription(`
-    
-    ,                                        HERE ARE THE RULES:
+        embed.setDescription(`HERE ARE THE RULES:
     
     :smiley: 1. Be cool, kind, and civil. Treat all members with respect and express your thoughts in a constructive manner.
     
