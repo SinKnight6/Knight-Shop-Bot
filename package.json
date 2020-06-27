@@ -9,6 +9,7 @@
   "author": "Knight Shop Creater",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.1.1"
+    "discord.js": "^12.1.1",
+    "weather-js": "^2.0.0"
   }
 }
