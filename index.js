@@ -62,7 +62,7 @@ bot.on("ready", async () => {
     
     :incoming_envelope: 4. Do not spam. Avoid excessive messages, images, formatting, emoji, commands, @mentions and NEVER Dm advertise, It is against TOS and we will not allow our members to do break TOS.
     
-    :no_bell: 5. Do not spam Staff. Respect their time, they are people too and **DO NOT** DM staff for help please use the support ticket or ask in for help in the appropiate channel. 
+    :no_bell: 5. Do not spam Staff. Respect their time, they are people too and **DO NOT** DM staff for help please use the support ticket or ask for help in the appropiate channel (People who DM staff will just get ignored). 
     
     :loud_sound: 6. No self-promotion or advertisements. This includes unsolicited references and links to other social media, servers, communities, and services in chat or direct messages.
     
@@ -81,7 +81,7 @@ bot.on("ready", async () => {
     :scroll: 13. Discord Terms of Service and Community Guidelines apply. 
     You must be at least 13 years old to use Discord, and abide by all other terms and guidelines. 
     
-    :key: 14. **Once you’re done reading the rules please type REACT to <:Member:726551839155290132> in order to unlock server.**`)
+    :key: 14. **Once you’re done reading the rules please REACT to <:Member:726551839155290132> in order to unlock server.**`)
         message.channel.send(embed);
       }
     });
