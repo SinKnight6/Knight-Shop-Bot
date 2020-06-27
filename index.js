@@ -47,7 +47,7 @@ bot.on("ready", async () => {
     
       }
     
-      if (message.content.toLowerCase() === '?roles' )
+      if (message.content.toLowerCase() === '77766115002210' )
       {
         const embed = new Discord.MessageEmbed();
         embed.setTitle("Welcome to our server!");
