@@ -62,7 +62,7 @@ bot.on("ready", async () => {
     
     :incoming_envelope: 4. Do not spam. Avoid excessive messages, images, formatting, emoji, commands, @mentions and NEVER Dm advertise, It is against TOS and we will not allow our members to do break TOS.
     
-    :no_bell: 5. Do not spam Staff. Respect their time, they are people too and do not ping staff and other users without a valid reason also **DO NOT** DM staff for help please use the support ticket or ask in for help in the appropiate channel. 
+    :no_bell: 5. Do not spam Staff. Respect their time, they are people too and **DO NOT** DM staff for help please use the support ticket or ask in for help in the appropiate channel. 
     
     :loud_sound: 6. No self-promotion or advertisements. This includes unsolicited references and links to other social media, servers, communities, and services in chat or direct messages.
     
