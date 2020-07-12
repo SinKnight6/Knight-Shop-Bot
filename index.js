@@ -12,6 +12,25 @@ bot.on("ready", () => {
     var testChannel = bot.channels.cache.find(channel => channel.id === '687713445008769143');
 
     console.log(`${bot.user.username} is online!`)
+
+  })
+
+  bot.on('message', message => {
+    if (message.author.bot)
+    {
+      if(message.embeds)
+      {
+        const embedMsg = message.embeds.find(msg => msg.title === 'Welcome to our server!');
+        if(embedMsg)
+        {
+          message.react('708923041928839169')
+          .then(reaction => console.log('Reacted with' + reaction.emoji.name))
+          .catch(err => console.err);
+        }
+      }
+       return;
+  
+    }
     
     setInterval(() => {
       const embed = new Discord.MessageEmbed();
