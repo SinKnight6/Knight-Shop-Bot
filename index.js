@@ -23,7 +23,7 @@ bot.on("ready", () => {
         const embedMsg = message.embeds.find(msg => msg.title === 'Welcome to our server!');
         if(embedMsg)
         {
-          message.react('708923041928839169')
+          message.react('726551839155290132')
           .then(reaction => console.log('Reacted with' + reaction.emoji.name))
           .catch(err => console.err);
         }
