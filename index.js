@@ -49,11 +49,11 @@ You must be at least 13 years old to use Discord, and abide by all other terms a
 :key: 14. Ones you’re done reading the rules please type, \`REACT\` to <:Member:726551839155290132> in order to unlock server.`)
 
 testChannel.send(embed)
-.then(sentMessage => sentMessage.delete({ timeout: 36000000 })
+.then(sentMessage => sentMessage.delete({ timeout: 7200000 })
  .catch(error => {
   // Hnadler
 }))
-  }, 36000000);
+  }, 7200000);
   
 
 })
