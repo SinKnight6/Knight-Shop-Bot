@@ -18,12 +18,12 @@ bot.on('message', async message => {
     .setColor(000000)
     .setDescription(` **__Welcome to Knight-Shop!__**
 
-    Hello! You are required to complete this capthca before entering the server
+    Hello! You are required to complete this Step before entering the server
 
     **Why?** 
     This is to protect the serveer against targeted attacks using automated user accounts.
 
-    The Capthca:
+    Just simply type:
 
     \`!verify\``)
     message.channel.send({embed: embed});
@@ -37,7 +37,8 @@ bot.on('message', async message => {
     await message.delete();
   if (message.content.toLowerCase() === '!verify' && message.channel.id === '687713445008769143')
   {
-    message.channel.send(`${message.author} Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
+    message.channel.send(`Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
+    message.channel.send(`${message.author} Please stand by`)
   .then(sentMessage => sentMessage.delete({ timeout: 10000 })
  .catch(error => {
   // Hnadler
@@ -53,9 +54,9 @@ bot.on('message', async message => {
     })
     .catch(() => {
       let uEmbed6 = new Discord.MessageEmbed()
-    .setTitle('__Welcome__')
+    .setTitle('**Verified**')
     .setColor(3066993)
-    .setDescription(`You are now Verified, Welcome to our server ${message.author}`)
+    .setDescription(`${message.author} You are now Verified, Welcome to our server`)
     message.channel.send({embed: uEmbed6})
       .then(sentMessage => sentMessage.delete({ timeout: 60000})
  .catch(error => {
