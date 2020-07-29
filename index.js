@@ -6,7 +6,7 @@ const weather = require('weather-js');
 
 const PREFIX = '$';
 
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client;
 
 bot.on('ready', () => console.log(`${bot.user.tag} has logged in fucker.`));
 
