@@ -77,7 +77,6 @@ bot.on('message', async message => {
   }
 
   bot.on('message', message => {
-    if(message.author.bot) return;
 
   if (message.content.toLowerCase() === '^Rules' && message.channel.id === '738151642884472896'){
     const embed = new Discord.MessageEmbed();
