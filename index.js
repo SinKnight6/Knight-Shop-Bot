@@ -29,7 +29,7 @@ bot.on('message', async message => {
     message.channel.send({embed: embed});
    };
 
-   if (message.content.toLowerCase() === '!Rules' && message.channel.id === '738151642884472896'){
+   if (message.content.toLowerCase() === '!Rules'){
     let embed = new Discord.MessageEmbed();
     embed.setTitle("Welcome to our server!");
     embed.setColor(000000);
