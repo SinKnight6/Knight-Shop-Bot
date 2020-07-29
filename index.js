@@ -13,7 +13,7 @@ bot.on('ready', () => console.log(`${bot.user.tag} has logged in fucker.`));
 bot.on('message', async message => {
   if (message.author.bot) return;
 
-  if (message.content.toLowerCase() === 'yeet' && message.channel.id === '687713445008769143'){
+  if (message.content.toLowerCase() === '0252505504' && message.channel.id === '687713445008769143'){
     let embed = new Discord.MessageEmbed()
     .setColor(000000)
     .setDescription(` **__Welcome to Knight-Shop!__**
