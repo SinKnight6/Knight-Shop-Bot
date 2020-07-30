@@ -58,7 +58,7 @@ Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
     .setColor(3066993)
     .setDescription(`${message.author} You are now Verified, Welcome to our server`)
     message.channel.send({embed: uEmbed6})
-      .then(sentMessage => sentMessage.delete({ timeout: 6000})
+      .then(sentMessage => sentMessage.delete({ timeout: 8000})
  .catch(error => {
     }));
   });
