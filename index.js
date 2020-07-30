@@ -67,7 +67,7 @@ bot.on('message', async message => {
     if(role) {
       try {
       setTimeout( async () => {
-      await message.member.roles.add(role); }, 10000)
+      await message.member.roles.add(role); }, 12000)
       console.log('Role added!');
     }
     catch(err) {
