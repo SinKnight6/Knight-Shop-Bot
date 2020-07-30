@@ -38,7 +38,7 @@ bot.on('message', async message => {
   if (message.content.toLowerCase() === '!verify' && message.channel.id === '687713445008769143')
   {
     message.channel.send(`${message.author} Please stand by.
-    Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
+  Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
   .then(sentMessage => sentMessage.delete({ timeout: 10000})
  .catch(error => {
   // Hnadler
