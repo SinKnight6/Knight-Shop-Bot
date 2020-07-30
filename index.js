@@ -38,7 +38,7 @@ bot.on('message', async message => {
   if (message.content.toLowerCase() === '!verify' && message.channel.id === '687713445008769143')
   {
     message.channel.send(`${message.author} Please stand by.
-  Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
+Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
   .then(sentMessage => sentMessage.delete({ timeout: 10000})
  .catch(error => {
   // Hnadler
@@ -58,7 +58,7 @@ bot.on('message', async message => {
     .setColor(3066993)
     .setDescription(`${message.author} You are now Verified, Welcome to our server`)
     message.channel.send({embed: uEmbed6})
-      .then(sentMessage => sentMessage.delete({ timeout: 60000})
+      .then(sentMessage => sentMessage.delete({ timeout: 6000})
  .catch(error => {
     }));
   });
