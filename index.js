@@ -14,11 +14,11 @@ bot.on('message', async message => {
   if (message.author.bot) return;
 
   if (message.content.toLowerCase() === '56516115650202020' && message.channel.id === '784215389583573003'){
-    let embed = new Discord.MessageEmbed()
+    let uembed1 = new Discord.MessageEmbed()
     .setColor(000000)
     .setDescription(` Use this command to begin
   \`Help purchase a recovery\``)
-    message.channel.send({embed: embed});
+    message.channel.send({embed: uembed1});
    };
 
   if (message.content.toLowerCase() === '0252505504' && message.channel.id === '687713445008769143'){
