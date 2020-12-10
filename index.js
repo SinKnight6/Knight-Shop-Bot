@@ -16,8 +16,12 @@ bot.on('message', async message => {
   if (message.content.toLowerCase() === '56516115650202020' && message.channel.id === '784215389583573003'){
     let uembed1 = new Discord.MessageEmbed()
     .setColor(000000)
-    .setDescription(` Use this command to begin:
-  \`Help purchase a recovery\``)
+    .setDescription(` 
+  To buy a recovery please type:
+  \`Recovery\`
+  To buy a Modded Account please type: 
+  \`Account\`
+  `)
     message.channel.send({embed: uembed1});
    };
 
