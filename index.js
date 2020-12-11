@@ -25,6 +25,20 @@ bot.on('message', async message => {
     message.channel.send({embed: uembed1});
    };
 
+  // Break 
+
+ if (message.content.toLowerCase() === 'recovery' || message.content.toLowerCase() === 'account'){
+   message.channel.send(`${message.author} We have sent you a PM, if you did not get a PM please seek help on <@689358139539324939> and tag <@594785101926105089>`)
+    .then(sentMessage => sentMessage.delete({ timeout: 50000
+    }))
+    .catch(error => {
+  
+  });
+    // Or just do message.delete();
+  }
+ 
+  // Break
+
   if (message.content.toLowerCase() === '0252505504' && message.channel.id === '687713445008769143'){
     let embed = new Discord.MessageEmbed()
     .setColor(000000)
