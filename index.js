@@ -17,9 +17,9 @@ bot.on('message', async message => {
     let uembed1 = new Discord.MessageEmbed()
     .setColor(000000)
     .setDescription(` 
-  To buy a recovery please type:
+  To buy a recovery please use this command:
   \`Recovery\`
-  To buy a Modded Account please type: 
+  To buy a Modded Account please use this command: 
   \`Account\`
   `)
     message.channel.send({embed: uembed1});
