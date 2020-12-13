@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 
 const token = process.env.token;
 
+const talkedRecently = new Set();
+
 const weather = require('weather-js');
 
 const PREFIX = '$';
@@ -27,15 +29,28 @@ bot.on('message', async message => {
 
   // Break 
 
- if (message.content.toLowerCase() === 'recovery' || message.content.toLowerCase() === 'account'){
-   message.channel.send(`${message.author} We have sent you a PM, if you did not get a PM please seek help on <#689358139539324939> and tag <@594785101926105089>`)
-    .then(sentMessage => sentMessage.delete({ timeout: 50000
-    }))
-    .catch(error => {
-  
-  });
-    // Or just do message.delete();
-  }
+  if (talkedRecently.has(msg.author.id)) {
+    msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
+} else {
+
+  if (message.content.toLowerCase() === 'recovery' || message.content.toLowerCase() === 'account'){
+    message.channel.send(`${message.author} We have sent you a PM, if you did not get a PM please seek help on <#689358139539324939> and tag <@594785101926105089>`)
+     .then(sentMessage => sentMessage.delete({ timeout: 50000
+     }))
+     .catch(error => {
+   
+   });
+     // Or just do message.delete();
+   }
+   // the user can type the command ... your command code goes here :)
+
+// Adds the user to the set so that they can't talk for a minute
+talkedRecently.add(msg.author.id);
+setTimeout(() => {
+  // Removes the user from the set after a minute
+  talkedRecently.delete(msg.author.id);
+}, 60000);
+}
  
   // Break
 
