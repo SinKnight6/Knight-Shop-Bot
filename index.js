@@ -28,7 +28,7 @@ bot.on('message', async message => {
   // Break 
 
 
- if (message.content.toLowerCase() === 'recovery' || message.content.toLowerCase() === 'account' && message.channel.id === '784215389583573003'){
+ if (message.content.toLowerCase() === 'recovery' && message.channel.id === '784215389583573003' || message.content.toLowerCase() === 'account' && message.channel.id === '784215389583573003'){
    message.channel.send(`${message.author} We have sent you a PM, if you did not get a PM please seek help on <#689358139539324939> and tag <@594785101926105089>`)
     .then(sentMessage => sentMessage.delete({ timeout: 50000
     }))
