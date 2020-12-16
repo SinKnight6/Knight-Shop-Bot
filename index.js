@@ -6,6 +6,8 @@ const weather = require('weather-js');
 
 const PREFIX = '$';
 
+const colors = require("./colors.json");
+
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', () => console.log(`${bot.user.tag} has logged in fucker.`));
@@ -15,17 +17,31 @@ bot.on('message', async message => {
 
   if (message.content.toLowerCase() === '56516115650202020' && message.channel.id === '784215389583573003'){
     let uembed1 = new Discord.MessageEmbed()
-    .setColor(000000)
+    .setColor(colors.green)
     .setDescription(` 
-  To buy a recovery please use this command:
+To buy a recovery please use this command:
   \`Recovery\`
-  To buy a Modded Account please use this command: 
+
+To buy a Modded Account please use this command: 
   \`Account\`
   `)
     message.channel.send({embed: uembed1});
    };
 
   // Break 
+
+  if (message.content.toLowerCase() === '022661120' && message.channel.id === '784215389583573003'){
+    let uembed1 = new Discord.MessageEmbed()
+    .setColor(colors.red)
+    .setDescription(` 
+❗**Shop is temperately Offline until further notice.**❗
+  `)
+  .setTimestamp()
+  .setFooter('please be patient')
+    message.channel.send({embed: uembed1});
+   };
+
+  // Break
 
 
  if (message.content.toLowerCase() === 'recovery' && message.channel.id === '784215389583573003' || message.content.toLowerCase() === 'account' && message.channel.id === '784215389583573003'){
