@@ -19,11 +19,20 @@ bot.on('message', async message => {
     let uembed1 = new Discord.MessageEmbed()
     .setColor(colors.green)
     .setDescription(` 
-To buy a recovery please use this command:
-  \`Recovery\`
-
-To buy a Modded Account please use this command: 
-  \`Account\`
+    To buy impulse mod menu please use this command:
+    \`Impulse\`
+    
+    To buy luna mod menu please use this command: 
+    \`Luna\`
+    
+    To buy phantom mod menu please use this command:
+    \`Phantom\`
+    
+    To buy ozark mod menu please use this command:
+    \`Ozark\`
+    
+    To buy delusion mod menu please use this command:
+    \`Delusion\`
   `)
     message.channel.send({embed: uembed1});
    };
@@ -126,20 +135,11 @@ if (message.content.toLowerCase() === '03332323550' && message.channel.id === '7
   let uembed1 = new Discord.MessageEmbed()
   .setColor(colors.green)
   .setDescription(` 
-To buy impulse mod menu please use this command:
-\`Impulse\`
+  To buy a recovery please use this command:
+  \`Recovery\`
 
-To buy luna mod menu please use this command: 
-\`Luna\`
-
-To buy phantom mod menu please use this command:
-\`Phantom\`
-
-To buy ozark mod menu please use this command:
-\`Ozark\`
-
-To buy delusion mod menu please use this command:
-\`Delusion\`
+To buy a Modded Account please use this command: 
+  \`Account\`
 `)
   message.channel.send({embed: uembed1});
  };
