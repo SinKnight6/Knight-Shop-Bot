@@ -122,7 +122,119 @@ Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
 
 // Break
 
+if (message.content.toLowerCase() === '03332323550' && message.channel.id === '789337633896923158'){
+  let uembed1 = new Discord.MessageEmbed()
+  .setColor(colors.green)
+  .setDescription(` 
+To buy impulse mod menu please use this command:
+\`Impulse\`
 
+To buy luna mod menu please use this command: 
+\`Luna\`
+
+To buy phantom mod menu please use this command:
+\`Phantom\`
+
+To buy ozark mod menu please use this command:
+\`Ozark\`
+
+To buy delusion mod menu please use this command:
+\`Delusion\`
+`)
+  message.channel.send({embed: uembed1});
+ };
+
+// Break 
+
+if (message.content.toLowerCase() === '022661120' && message.channel.id === '789337633896923158'){
+  let uembed1 = new Discord.MessageEmbed()
+  .setColor(colors.red)
+  .setDescription(` 
+❗**Shop is temperately Offline until further notice.**❗
+`)
+.setTimestamp()
+.setFooter('please be patient')
+  message.channel.send({embed: uembed1});
+ };
+
+// Break
+
+
+if (message.content.toLowerCase() === 'recovery' && message.channel.id === '789337633896923158' || message.content.toLowerCase() === 'account' && message.channel.id === '789337633896923158'){
+ message.channel.send(`${message.author} We have sent you a PM, if you did not get a PM please seek help on <#689358139539324939> and tag <@594785101926105089>`)
+  .then(sentMessage => sentMessage.delete({ timeout: 50000
+  }))
+  .catch(error => {
+
+});
+  // Or just do message.delete();
+}
+
+// Break
+
+if (message.content.toLowerCase() === '0252505504' && message.channel.id === '687713445008769143'){
+  let embed = new Discord.MessageEmbed()
+  .setColor(000000)
+  .setDescription(` **__Welcome to Knight-Shop!__**
+
+  Hello! You are required to complete this Step before entering the server
+
+  **Why?** 
+  This is to protect the serveer against targeted attacks using automated user accounts.
+
+  Just simply type:
+
+  \`!verify\``)
+  message.channel.send({embed: embed});
+ };
+
+bot.on('guildMemberAdd', member => {
+  console.log(member.user.tag);
+});
+
+if (message.channel.id === '789337632911392783')
+  await message.delete();
+if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
+{
+  message.channel.send(`${message.author} Please stand by.
+Attempting to verify you in **Kight-Shop Recoveries** ......`)
+.then(sentMessage => sentMessage.delete({ timeout: 10000})
+.catch(error => {
+// Hnadler
+}))
+.then(() => {
+message.channel.awaitMessages(response => response.content === '', {
+  max: 1,
+  time: 100,
+  errors: ['time'],
+})
+.then((collected) => {
+    message.channel.send(`The collected message was: ${collected.first().content}`);
+  })
+  .catch(() => {
+    let uEmbed6 = new Discord.MessageEmbed()
+  .setTitle('**Verified**')
+  .setColor(3066993)
+  .setDescription(`${message.author} You are now Verified, Welcome to our server`)
+  message.channel.send({embed: uEmbed6})
+    .then(sentMessage => sentMessage.delete({ timeout: 6000})
+.catch(error => {
+  }));
+});
+});
+  await message.delete().catch(err => console.log(err));
+  const role = message.guild.roles.cache.get('789337632899334184');
+  if(role) {
+    try {
+    setTimeout( async () => {
+    await message.member.roles.add(role); }, 12000)
+    console.log('Role added!');
+  }
+  catch(err) {
+    console.log(err);
+    }
+  }
+}
     
     
     
