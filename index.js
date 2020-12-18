@@ -172,7 +172,10 @@ if (message.content.toLowerCase() === 'recovery' && message.channel.id === '7893
 
 // Break
 
-if (message.content.toLowerCase() === '0252505504' && message.channel.id === '687713445008769143'){
+
+// New channel
+
+if (message.content.toLowerCase() === '0252505504' && message.channel.id === '789337632911392783'){
   let embed = new Discord.MessageEmbed()
   .setColor(000000)
   .setDescription(` **__Welcome to Knight-Shop!__**
