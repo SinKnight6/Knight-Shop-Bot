@@ -130,7 +130,8 @@ Attempting to verify you in **Kight-Shop** <a:Loading:705280596217430019>`)
   }
 
 // Break
-
+if (message.channel.id === '789337633896923158')
+    await message.delete();
 if (message.content.toLowerCase() === '03332323550' && message.channel.id === '789337633896923158'){
   let uembed1 = new Discord.MessageEmbed()
   .setColor(colors.green)
