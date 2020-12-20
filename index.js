@@ -201,7 +201,7 @@ if (message.channel.id === '789337632911392783')
 if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
 {
   message.channel.send(`${message.author} Please stand by.
-Attempting to verify you in **Kight-Shop Recoveries** ......`)
+Attempting to verify you in **Kight-Shop Recoveries** <a:Loading:705280596217430019>`)
 .then(sentMessage => sentMessage.delete({ timeout: 10000})
 .catch(error => {
 // Hnadler
