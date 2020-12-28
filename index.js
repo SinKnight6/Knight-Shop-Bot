@@ -239,7 +239,7 @@ message.channel.awaitMessages(response => response.content === '', {
     console.log(err);
     }
   } else {
-    if(role) {
+    if(freet) {
       try {
       setTimeout( async () => {
       await message.member.roles.add(freet); }, 12000)
