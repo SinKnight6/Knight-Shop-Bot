@@ -228,7 +228,6 @@ message.channel.awaitMessages(response => response.content === '', {
 });
   await message.delete().catch(err => console.log(err));
   const role = message.guild.roles.cache.get('789337632899334184' );
-  const freet = message.guild.roles.cache.get('793043204416208906');
   if(role) {
     try {
     setTimeout( async () => {
@@ -238,16 +237,23 @@ message.channel.awaitMessages(response => response.content === '', {
   catch(err) {
     console.log(err);
     }
-  } else {
-    if(freet) {
-      try {
-      setTimeout( async () => {
-      await message.member.roles.add(freet); }, 12000)
-      console.log(`Role ${freet} added!`);
-    }
-    catch(err) {
-      console.log(err);
-      }
+  }
+}
+
+// Break
+
+if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
+{
+  await message.delete().catch(err => console.log(err));
+  const role = message.guild.roles.cache.get('793043204416208906');
+  if(role) {
+    try {
+    setTimeout( async () => {
+    await message.member.roles.add(role); }, 12000)
+    console.log(`Role ${role} added!`);
+  }
+  catch(err) {
+    console.log(err);
     }
   }
 }
