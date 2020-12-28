@@ -228,11 +228,12 @@ message.channel.awaitMessages(response => response.content === '', {
 });
   await message.delete().catch(err => console.log(err));
   const role = message.guild.roles.cache.get('789337632899334184');
+  const freet = message.guild.role.cache.get('793043204416208906')
   if(role) {
     try {
     setTimeout( async () => {
-    await message.member.roles.add(role); }, 12000)
-    console.log('Role added!');
+    await message.member.roles.add(role, freet); }, 12000)
+    console.log(`Role ${role} and ${freet} added!`);
   }
   catch(err) {
     console.log(err);
