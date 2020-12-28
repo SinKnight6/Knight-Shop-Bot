@@ -232,25 +232,25 @@ message.channel.awaitMessages(response => response.content === '', {
   if(role) {
     try {
     setTimeout( async () => {
-    await message.member.roles.add(role, freet); }, 12000)
+    await message.member.roles.add(role); }, 12000)
     console.log(`Role ${role} added!`);
   }
   catch(err) {
     console.log(err);
     }
+  } else {
+    if(role) {
+      try {
+      setTimeout( async () => {
+      await message.member.roles.add(freet); }, 12000)
+      console.log(`Role ${freet} added!`);
+    }
+    catch(err) {
+      console.log(err);
+      }
+    }
   }
 }
-if(role) {
-  try {
-  setTimeout( async () => {
-  await message.member.roles.add(freet); }, 12000)
-  console.log(`Role ${role} added!`);
-}
-catch(err) {
-  console.log(err);
-  }
-}
-
     
     
     
