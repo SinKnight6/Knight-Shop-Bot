@@ -240,6 +240,17 @@ message.channel.awaitMessages(response => response.content === '', {
     }
   }
 }
+if(role) {
+  try {
+  setTimeout( async () => {
+  await message.member.roles.add(freet); }, 12000)
+  console.log(`Role ${role} added!`);
+}
+catch(err) {
+  console.log(err);
+  }
+}
+
     
     
     
