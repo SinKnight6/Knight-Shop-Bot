@@ -198,8 +198,6 @@ bot.on('guildMemberAdd', member => {
 
 if (message.channel.id === '789337632911392783')
   await message.delete();
-if (message.channel.id === '789337632911392783')
-  await message.delete();
 if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
 {
   message.channel.send(`${message.author} Please stand by.
