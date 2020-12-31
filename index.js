@@ -179,16 +179,17 @@ if (message.content.toLowerCase() === 'recovery' && message.channel.id === '7893
 if (message.content.toLowerCase() === '0252505504' && message.channel.id === '789337632911392783'){
   let embed = new Discord.MessageEmbed()
   .setColor(000000)
-  .setDescription(` **__Welcome to Knight-Shop!__**
+  .setDescription(` **__Welcome to Knight-Shop Recoveries!__**
 
   Hello! You are required to complete this Step before entering the server
 
   **Why?** 
-  This is to protect the serveer against targeted attacks using automated user accounts.
+  This is to protect the server against targeted attacks using automated user accounts.
 
-  Just simply type:
 
-  \`!verify\``)
+  To enter this server you must type in the 12 or 14 digit code:
+  
+  Exaple: \`000-0000-0000-000\`.`)
   message.channel.send({embed: embed});
  };
 
@@ -198,7 +199,7 @@ bot.on('guildMemberAdd', member => {
 
 if (message.channel.id === '789337632911392783')
   await message.delete();
-if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
+if (message.content.toLowerCase() === '7216-5215-2615' && message.channel.id === '789337632911392783')
 {
   message.channel.send(`${message.author} Please stand by.
 Attempting to verify you in **Kight-Shop Recoveries** <a:Loading:705280596217430019>`)
@@ -242,10 +243,54 @@ message.channel.awaitMessages(response => response.content === '', {
 
 // Break
 
-if (message.content.toLowerCase() === '!verify' && message.channel.id === '789337632911392783')
+if (message.content.toLowerCase() === '7216-5215-2615' && message.channel.id === '789337632911392783')
 {
   await message.delete().catch(err => console.log(err));
   const role = message.guild.roles.cache.get('793043204416208906');
+  if(role) {
+    try {
+    setTimeout( async () => {
+    await message.member.roles.add(role); }, 12000)
+    console.log(`Role ${role} added!`);
+  }
+  catch(err) {
+    console.log(err);
+    }
+  }
+}
+
+// Break 
+
+if (message.content.toLowerCase() === '666-1352-7715-910' && message.channel.id === '789337632911392783')
+{
+  message.channel.send(`${message.author} Please stand by.
+Attempting secretly to verify you in **Kight-Shop Recoveries Black Market** <a:Loading:705280596217430019>`)
+.then(sentMessage => sentMessage.delete({ timeout: 10000})
+.catch(error => {
+// Hnadler
+}))
+.then(() => {
+message.channel.awaitMessages(response => response.content === '', {
+  max: 1,
+  time: 100,
+  errors: ['time'],
+})
+.then((collected) => {
+    message.channel.send(`The collected message was: ${collected.first().content}`);
+  })
+  .catch(() => {
+    let uEmbed6 = new Discord.MessageEmbed()
+  .setTitle('**Verified**')
+  .setColor(3066993)
+  .setDescription(`${message.author} You are now Verified, Welcome to the black market.`)
+  message.channel.send({embed: uEmbed6})
+    .then(sentMessage => sentMessage.delete({ timeout: 6000})
+.catch(error => {
+  }));
+});
+});
+  await message.delete().catch(err => console.log(err));
+  const role = message.guild.roles.cache.get('794071552869269555');
   if(role) {
     try {
     setTimeout( async () => {
