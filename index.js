@@ -307,7 +307,7 @@ message.channel.awaitMessages(response => response.content === '', {
 if (message.channel.id === '793043133335732234')
             await message.delete()
             .catch(err => {  
-                console.log()              
+                console.log(err)              
             })
     
     
